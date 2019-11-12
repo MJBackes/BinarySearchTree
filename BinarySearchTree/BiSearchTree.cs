@@ -10,13 +10,9 @@ namespace BinarySearchTree
     public class BiSearchTree<T> where T:IComparable
     {
         public TreeNode<T> Root;
-
-        public BiSearchTree()
-        {
-
-        }
         public void Add(TreeNode<T> input)
         {
+            //O(n)
             if(Root == null)
             {
                 Root = input;
@@ -53,6 +49,7 @@ namespace BinarySearchTree
         }
         public bool Search(T input)
         {
+            //O(logn)
             if (Root == null)
                 return false;
             if (input.CompareTo(Root.value) == 0)
